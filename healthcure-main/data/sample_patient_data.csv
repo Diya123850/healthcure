@@ -1,0 +1,11 @@
+age,blood_pressure,cholesterol,glucose,gender,smoking,exercise,diagnosis
+45,130,220,110,M,yes,no,1
+54,140,180,90,F,no,yes,0
+38,120,200,95,F,yes,yes,0
+60,150,240,130,M,no,no,1
+52,135,210,100,F,no,no,1
+47,128,195,105,M,yes,yes,0
+36,115,170,85,F,no,yes,0
+49,142,230,120,M,yes,no,1
+58,146,185,92,F,no,no,1
+41,125,190,98,M,yes,yes,0

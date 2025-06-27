@@ -1,0 +1,11 @@
+age,blood_pressure,cholesterol,glucose,diagnosis,gender_M,smoking_yes,exercise_yes
+45,130,220,110,1,True,True,False
+54,140,180,90,0,False,False,True
+38,120,200,95,0,False,True,True
+60,150,240,130,1,True,False,False
+52,135,210,100,1,False,False,False
+47,128,195,105,0,True,True,True
+36,115,170,85,0,False,False,True
+49,142,230,120,1,True,True,False
+58,146,185,92,1,False,False,False
+41,125,190,98,0,True,True,True

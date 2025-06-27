@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: healthcure-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: healthcure
+  template:
+    metadata:
+      labels:
+        app: healthcure
+    spec:
+      containers:
+      - name: healthcure
+        image: yourdockerhub/healthcure:latest
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HealthCure Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        .container {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: 600;
+        }
+
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background: #3498db;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: #2980b9;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .healthy {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .disease {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>HealthCure Prediction</h2>
+        <form method="post">
+            <label for="age">Age</label>
+            <input type="number" name="age" required>
+
+            <label for="blood_pressure">Blood Pressure</label>
+            <input type="number" name="blood_pressure" required>
+
+            <label for="cholesterol">Cholesterol</label>
+            <input type="number" name="cholesterol" required>
+
+            <label for="glucose">Glucose</label>
+            <input type="number" name="glucose" required>
+
+            <label for="gender">Gender</label>
+            <select name="gender" required>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+
+            <label for="smoking">Smoking</label>
+            <select name="smoking" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="exercise">Exercise</label>
+            <select name="exercise" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction is not none %}
+            <div class="result {{ 'disease' if prediction == 1 else 'healthy' }}">
+                Prediction: {{ 'Disease' if prediction == 1 else 'Healthy' }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
